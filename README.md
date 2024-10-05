@@ -21,3 +21,16 @@ TASK 1
 - Proper memory management to avoid leaks after process completion.
 
 TASK 2
+1. Approach:
+The `LargeNumber` class uses a linked list of `Node` structures to represent large integers (up to 1024 bits). Each node holds a 64-bit unsigned integer, allowing dynamic growth. Key functionalities include generating random large numbers, performing arithmetic operations (addition, subtraction, and division by two), and checking primality using the Miller-Rabin test.
+
+2. Assumptions:
+- The linked list can handle large integers without overflow.
+- The `rand` function provides a uniform distribution for random number generation.
+- Five iterations of the Miller-Rabin test are sufficient for primality checking.
+
+3. Challenges Faced:
+- Managing dynamic memory to prevent leaks.
+- Implementing precise bit manipulation for arithmetic operations.
+- Ensuring efficiency and accuracy in the Miller-Rabin primality test.
+- Addressing potential performance issues with large numbers in linked list format.
